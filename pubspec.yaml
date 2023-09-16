@@ -1,0 +1,48 @@
+name: flutter_feature_flags_firebase_example
+description: Feature flags setup with Firebase Remote Config example
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State managment:
+  get_it: ^7.6.0
+
+  # Data
+  copy_with_extension: ^5.0.2
+  collection: ^1.17.2
+  json_annotation: ^4.8.1
+
+  # Firebase
+  firebase_core: ^2.13.0
+  firebase_remote_config: ^4.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Lint
+  flutter_lints: ^2.0.1
+  analyzer: ^5.13.0
+
+  # Data
+  build_runner: ^2.4.4
+  json_serializable: ^6.7.0
+  copy_with_extension_gen: ^5.0.2
+
+dependency_overrides:
+  collection: ^1.17.1
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+
