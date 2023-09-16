@@ -29,8 +29,8 @@ class _HomeViewState extends State<HomeView> {
               isScrollable: true,
               tabs: [
                 const Tab(
-                  icon: Icon(Icons.settings),
-                  child: Text('My User'),
+                  icon: Icon(Icons.home),
+                  child: Text('Home'),
                 ),
                 if (_viewModel.enableMyCarTab)
                   const Tab(

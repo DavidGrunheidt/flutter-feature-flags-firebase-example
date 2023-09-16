@@ -20,6 +20,7 @@ abstract class _RemoteConfigRepository with Store {
   @observable
   bool enableMyCityTab = false;
 
+  @action
   Future<void> init() async {
     try {
       if (!kIsWeb) _remoteConfig.onConfigUpdated.listen(_updateConfigs, onError: (_) {});
@@ -38,13 +39,14 @@ abstract class _RemoteConfigRepository with Store {
     }
   }
 
+  @action
   Future<void> fetchAndUpdate() async {
-    await _remoteConfig.fetchAndActivate();
+    await _remoteConfig.fetch();
     return _updateConfigs(RemoteConfigUpdate({}));
   }
 
+  @action
   Future<void> _updateConfigs(RemoteConfigUpdate remoteConfigUpdate) async {
-    if (kDebugMode) print('[RemoteConfigRepository] - updateConfigs');
     await _remoteConfig.activate();
 
     enableMyCarTab = _remoteConfig.getBool(kEnableMyCarTabKey);

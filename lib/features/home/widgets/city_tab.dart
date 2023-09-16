@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 
+import '../../../helpers/app_constants.dart';
 import '../home_view_model.dart';
 
 class CityTab extends StatelessWidget {
@@ -16,12 +16,11 @@ class CityTab extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
-        child: Observer(
-          builder: (context) => Column(
-            children: [
-              Text('My City: ${viewModel.userInfo.city}'),
-            ],
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('My City: ${userInfo.city}'),
+          ],
         ),
       ),
     );
