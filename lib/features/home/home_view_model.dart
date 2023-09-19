@@ -1,6 +1,6 @@
 import 'package:mobx/mobx.dart';
 
-import '../../dependency_locator.dart';
+import '../../helpers/dependency_locator.dart';
 import '../../repositories/remote_config_repository.dart';
 
 part 'home_view_model.g.dart';

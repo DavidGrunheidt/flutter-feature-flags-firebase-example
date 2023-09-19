@@ -4,7 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'home_view_model.dart';
 import 'widgets/car_tab.dart';
 import 'widgets/city_tab.dart';
-import 'widgets/user_tab.dart';
+import 'widgets/home_tab.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -48,7 +48,7 @@ class _HomeViewState extends State<HomeView> {
           body: Center(
             child: TabBarView(
               children: [
-                UserTab(viewModel: _viewModel),
+                HomeTab(viewModel: _viewModel),
                 if (_viewModel.enableMyCarTab) CarTab(viewModel: _viewModel),
                 if (_viewModel.enableMyCityTab) CityTab(viewModel: _viewModel),
               ],

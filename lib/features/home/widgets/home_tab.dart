@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../home_view_model.dart';
 
-class UserTab extends StatelessWidget {
-  const UserTab({
+class HomeTab extends StatelessWidget {
+  const HomeTab({
     super.key,
     required this.viewModel,
   });

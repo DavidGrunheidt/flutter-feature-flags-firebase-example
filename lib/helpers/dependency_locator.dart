@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 
-import '../repositories/remote_config_repository.dart';
-import 'repositories/analytics_repository.dart';
+import '../../repositories/remote_config_repository.dart';
+import '../repositories/analytics_repository.dart';
 
 GetIt dependencyLocator = GetIt.instance;
 
